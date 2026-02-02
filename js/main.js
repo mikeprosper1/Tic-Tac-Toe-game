@@ -10,9 +10,10 @@ if (!username) {
 document.getElementById("welcome").innerText = `Welcome, ${username}`;
 
 // ===== PROFILE PICTURE =====
-const profileImg = document.getElementById("profileImg");
-const savedProfile = localStorage.getItem("profilePic");
-if (savedProfile) profileImg.src = savedProfile;
+const profilePic = document.getElementById("profilePic");
+const savedPic = localStorage.getItem(`${username}_profilePic`);
+if(savedPic) profilePic.src = savedPic;
+
 
 profileImg.onclick = () => {
   const file = document.createElement("input");
