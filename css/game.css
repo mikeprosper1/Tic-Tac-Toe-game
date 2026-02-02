@@ -1,0 +1,132 @@
+* {
+  box-sizing: border-box;
+  font-family: "Segoe UI", system-ui, sans-serif;
+}
+
+body {
+  margin: 0;
+  background: radial-gradient(circle at top, #0f2027, #020617);
+  color: #e5e7eb;
+}
+
+.game {
+  min-height: 100vh;
+  padding: 20px;
+  max-width: 520px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+/* HEADER */
+.top {
+  text-align: center;
+}
+
+.top h1 {
+  margin: 0;
+  font-size: 1.6rem;
+}
+
+.mode {
+  display: inline-block;
+  margin-top: 6px;
+  padding: 6px 16px;
+  border-radius: 20px;
+  background: #22d3ee;
+  color: #020617;
+  font-weight: 700;
+}
+
+/* SCORE */
+.score {
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+}
+
+.score div strong {
+  display: block;
+  font-size: 1.8rem;
+  margin-top: 4px;
+}
+
+.score small {
+  opacity: 0.8;
+}
+
+/* ROUND */
+.round {
+  text-align: center;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+/* BUTTONS */
+button {
+  border: none;
+  border-radius: 12px;
+  padding: 14px;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.back {
+  background: #1f2933;
+  color: #e5e7eb;
+}
+
+.primary {
+  background: #22d3ee;
+  color: #020617;
+  font-weight: 700;
+}
+
+/* STATUS */
+.status {
+  text-align: center;
+  font-size: 1.1rem;
+}
+
+/* BOARD */
+.board-wrap {
+  display: flex;
+  justify-content: center;
+}
+
+.board {
+  width: 100%;
+  max-width: 360px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+}
+
+.cell {
+  aspect-ratio: 1;
+  background: rgba(255,255,255,0.05);
+  border: 2px solid #22d3ee55;
+  border-radius: 18px;
+  font-size: 3rem;
+  font-weight: 800;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.cell:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 12px #22d3ee88;
+}
+
+.cell.X { color: #38bdf8; }
+.cell.O { color: #f472b6; }
+
+.actions {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Home</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/global.css">
+  <link rel="stylesheet" href="css/home.css">
+</head>
+<body>
+  <div class="home-container">
+
+    <!-- TOP BAR -->
+    <div class="top-bar">
+      <div class="profile-icon" onclick="openProfile()">
+        <img id="profileImg" src="images/profile.png" alt="Profile">
+      </div>
+      <h2 id="welcome" class="welcome-text">Welcome</h2>
+    </div>
+
+    <!-- CARD -->
+    <div class="home-card">
+
+      <!-- SYMBOL SELECTION -->
+      <div class="section" id="symbolSection">
+        <h2>Choose Your Symbol</h2>
+        <div class="symbols">
+          <button id="btnX" onclick="chooseSymbol('X')">X</button>
+          <button id="btnO" onclick="chooseSymbol('O')">O</button>
+        </div>
+      </div>
+
+      <!-- MODE SELECTION -->
+      <div class="section" id="modeSection">
+        <h2>Select Game Mode</h2>
+        <div class="mode-grid">
+          <div class="mode-card" onclick="openOnePlayer()">
+            <span class="emoji">🤖</span>
+            <h3>One Player</h3>
+            <p>Challenge the Minimax AI</p>
+          </div>
+          <div class="mode-card" onclick="startLocal()">
+            <span class="emoji">👥</span>
+            <h3>Two Player (Local)</h3>
+            <p>Play with a friend on one device</p>
+          </div>
+          <div class="mode-card" onclick="startOnline()">
+            <span class="emoji">🌐</span>
+            <h3>Play Online</h3>
+            <p>Connect and play with friends</p>
+          </div>
+          <div class="mode-card stats" onclick="viewStats()">
+            <span class="emoji">📊</span>
+            <h3>View Statistics</h3>
+            <p>Check your match history</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- AI LEVELS -->
+      <div class="section hidden" id="aiSection">
+        <h2>AI Difficulty</h2>
+        <div class="difficulty-buttons">
+          <button onclick="startGame('easy')">Easy</button>
+          <button onclick="startGame('normal')">Normal</button>
+          <button onclick="startGame('hard')">Hard</button>
+        </div>
+        <button class="back-btn" onclick="goBack()">← Back</button>
+      </div>
+
+      <!-- STATISTICS -->
+      <div class="section hidden" id="statsSection">
+        <div class="stats-header">
+          <button class="back-btn" onclick="closeStats()">← Back</button>
+          <h2>Statistics</h2>
+        </div>
+        <div class="stats-totals">
+          <p id="totalMatches">Total Matches: 0</p>
+          <p id="totalWins">Wins: 0</p>
+          <p id="winRate">Win Rate: 0%</p>
+        </div>
+        <h3 class="match-history-title">Match History</h3>
+        <div class="history-container" id="historyContainer">
+          <!-- Match cards injected by JS -->
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

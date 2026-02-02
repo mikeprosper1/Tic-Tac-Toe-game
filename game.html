@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tic Tac Toe</title>
+  <link rel="stylesheet" href="css/game.css" />
+</head>
+<body>
+
+<div class="game">
+
+  <!-- HEADER -->
+  <header class="top">
+    <h1>One Player Mode</h1>
+    <span id="modeLabel" class="mode">EASY</span>
+  </header>
+
+  <!-- SCORE -->
+  <section class="score">
+    <div>
+      <small>You</small>
+      <strong id="youScore">0</strong>
+    </div>
+
+    <div>
+      <small>Draw</small>
+      <strong id="drawScore">0</strong>
+    </div>
+
+    <div>
+      <small>AI</small>
+      <strong id="aiScore">0</strong>
+    </div>
+  </section>
+
+  <!-- ROUND -->
+  <div id="roundText" class="round">ROUND 1 / 3</div>
+
+  <!-- BACK -->
+  <button id="backMenuBtn" class="back">⬅ Back to Menu</button>
+
+  <!-- STATUS -->
+  <div id="status" class="status">Your Turn (X)</div>
+
+  <!-- BOARD -->
+  <div class="board-wrap">
+    <div id="board" class="board"></div>
+  </div>
+
+  <!-- ACTIONS -->
+  <div class="actions">
+    <button id="nextRoundBtn" class="primary" style="display:none">Next Round</button>
+    <button id="newGameBtn" class="primary" style="display:none">New Game</button>
+  </div>
+
+</div>
+
+<script src="js/game/ai.js"></script>
+<script src="js/game/board.js"></script>
+</body>
+</html>

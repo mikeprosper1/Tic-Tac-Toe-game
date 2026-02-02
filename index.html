@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Tic Tac Toe | Login</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/global.css">
+  <link rel="stylesheet" href="css/auth.css">
+</head>
+<body>
+
+<div class="auth-box">
+  <h1>🎮 Tic Tac Toe</h1>
+  <input id="username" placeholder="Enter username">
+  <button onclick="login()">Login</button>
+</div>
+
+<script>
+function login() {
+  const username = document.getElementById("username").value.trim();
+  if(!username) return alert("Please enter a username");
+
+  localStorage.setItem("username", username);
+
+  // Initialize stats for new users
+  if(!localStorage.getItem(`${username}_stats`)) {
+    const defaultStats = {
+      ai: { easy:{wins:0, draw:0, loss:0}, normal:{wins:0, draw:0, loss:0}, hard:{wins:0, draw:0, loss:0} },
+      local: { player1:{wins:0, draw:0}, player2:{wins:0, draw:0} },
+      online: {}
+    };
+    localStorage.setItem(`${username}_stats`, JSON.stringify(defaultStats));
+  }
+
+  window.location.href = "home.html";
+}
+</script>
+
+</body>
+</html>

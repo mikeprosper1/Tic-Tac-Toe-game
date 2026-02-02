@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Profile | Tic Tac Toe</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/global.css">
+  <link rel="stylesheet" href="css/profile.css">
+</head>
+<body>
+
+<div class="profile-box">
+  <!-- Profile Header -->
+  <div class="profile-header">
+    <img id="profilePic" src="images/profile.png" alt="Profile Picture" class="profile-pic">
+    <h2 id="username">Player</h2>
+  </div>
+
+  <!-- Overview -->
+  <div class="overview-box">
+    <h3>Overview</h3>
+    <div class="overview-stats">
+      <div class="overview-card">
+        <span class="stat-number" id="totalMatches">0</span>
+        <span class="stat-label">Total Matches</span>
+      </div>
+      <div class="overview-card">
+        <span class="stat-number" id="totalWins">0</span>
+        <span class="stat-label">Matches Won</span>
+      </div>
+      <div class="overview-card">
+        <span class="stat-number" id="winRate">0%</span>
+        <span class="stat-label">Win Rate</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Back Home Button -->
+  <button onclick="backHome()">← Back to Home</button>
+</div>
+
+<script src="js/profile.js"></script>
+</body>
+</html>
